@@ -1,0 +1,149 @@
+<h5 class="my-4">Bem vindo a D&M Imóveis </h5>
+
+      <!-- Portfolio Section -->
+      <div class="row mb-4">
+        <div class="col-md-1">
+          <span class="fa-stack fa-3x text-danger">
+            <i class="fa fa-heart fa-stack-1x"></i>
+          </span>
+        </div>
+        <div class="col-md-4">
+            </br></br>
+            <h4 class="text-danger">Imóveis para compra</h4>
+        </div>
+      </div>
+
+
+      <div class="row">
+        <div class="col-lg-4 col-sm-6 portfolio-item">
+          <div class="card h-100">
+            <a href="#"><img class="card-img-top" src="<%= @post1.url %>" alt=""></a>
+            <div class="card-body">
+              <h4 class="card-title">
+                <%= link_to "#{@post1}", @post1%>
+              </h4>
+              <p class="card-text"><%= @post1.description %></p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-sm-6 portfolio-item">
+          <div class="card h-100">
+            <a href="#"><img class="card-img-top" src="<%= @post2.url%>" alt="" width="100"></a>
+            <div class="card-body">
+              <h4 class="card-title">
+                <%= link_to "#{@post2}", @post2%>
+              </h4>
+              <p class="card-text"><%= @post2.try(:description) %></p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-sm-6 portfolio-item">
+          <div class="card h-100">
+            <a href="#"><img class="card-img-top" src="<%= @post3.try(:url) %>" alt=""></a>
+            <div class="card-body">
+              <h4 class="card-title">
+                <%= link_to "#{@post3}", @post3%>
+              </h4>
+              <p class="card-text"><%= @post3.try(:description)%></p>
+            </div>
+          </div>
+        </div>        
+      </div>
+      <!-- Call to Action Section -->
+      <div class="row mb-4">
+        <div class="col-md-8">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias, expedita, saepe, vero rerum deleniti beatae veniam harum neque nemo praesentium cum alias asperiores commodi.</p>
+        </div>
+        <div class="col-md-4">
+          <a class="btn btn-lg btn-danger btn-block" href="<%= posts_path %>">Mais imóveis</a>
+        </div>
+      </div>
+      <hr>      
+
+      <div class="row mb-4">
+        <div class="col-md-1">
+          <span class="fa-stack fa-3x text-danger">
+            <i class="fa fa-home fa-stack-1x"></i>
+          </span>
+        </div>
+        <div class="col-md-4">
+            </br></br>
+            <h4 class="text-danger">Imóveis para Locação</h4>
+        </div>
+      </div>
+      
+
+      
+      
+
+      <div class="row">
+        <div class="col-lg-4 col-sm-6 portfolio-item">
+          <div class="card h-100">
+            <a href="#"><img class="card-img-top" src="https://www.parque-montroig.com/en/rentals/fotos/2/1372261854b1492900e53e7100f01de3699df6d423/146045883107c0d126932b0ba4d6af8a4d2875d8d6.jpg" alt=""></a>
+            <div class="card-body">
+              <h4 class="card-title">
+                <a href="#">Apartamento</a>
+              </h4>
+              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur eum quasi sapiente nesciunt? Voluptatibus sit, repellat sequi itaque deserunt, dolores in, nesciunt, illum tempora ex quae? Nihil, dolorem!</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-sm-6 portfolio-item">
+          <div class="card h-100">
+            <a href="#"><img class="card-img-top" src="http://www.elblogdeldecorador.cl/wp-content/uploads/2017/03/revestimiento-de-piedra-656x984.jpg" alt="" width="100"></a>
+            <div class="card-body">
+              <h4 class="card-title">
+                <a href="#">Casa com 5 quartos</a>
+              </h4>
+              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-sm-6 portfolio-item">
+          <div class="card h-100">
+            <a href="#"><img class="card-img-top" src="https://servicioscady3d.files.wordpress.com/2008/10/apartamento-1.jpg" alt=""></a>
+            <div class="card-body">
+              <h4 class="card-title">
+                <a href="#">Casa </a>
+              </h4>
+              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos quisquam, error quod sed cumque, odio distinctio velit nostrum temporibus necessitatibus et facere atque iure perspiciatis mollitia recusandae vero vel quam!</p>
+            </div>
+          </div>
+        </div>        
+      </div>
+<!-- Call to Action Section -->
+      <div class="row mb-4">
+        <div class="col-md-8">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias, expedita, saepe, vero rerum deleniti beatae veniam harum neque nemo praesentium cum alias asperiores commodi.</p>
+        </div>
+        <div class="col-md-4">
+          <a class="btn btn-lg btn-danger btn-block" href="#">Mais imóveis</a>
+        </div>
+      </div>
+      <hr>      
+      <!-- /.row -->
+
+      <!-- Features Section -->
+      <div class="row">
+        <div class="col-lg-6">
+          <h2>Modern Business Features</h2>
+          <p>The Modern Business template by Start Bootstrap includes:</p>
+          <ul>
+            <li>
+              <strong>Bootstrap v4</strong>
+            </li>
+            <li>jQuery</li>
+            <li>Font Awesome</li>
+            <li>Working contact form with validation</li>
+            <li>Unstyled page elements for easy customization</li>
+          </ul>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, omnis doloremque non cum id reprehenderit, quisquam totam aspernatur tempora minima unde aliquid ea culpa sunt. Reiciendis quia dolorum ducimus unde.</p>
+        </div>
+        <div class="col-lg-6">
+          <img class="img-fluid rounded" src="http://placehold.it/700x450" alt="">
+        </div>
+      </div>
+      <!-- /.row -->
+
+      <hr>
+      

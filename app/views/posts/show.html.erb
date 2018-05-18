@@ -1,0 +1,56 @@
+       <br><br> 
+      <!-- Portfolio Item Row -->
+      <div class="row">
+
+        <div class="col-md-8">
+          <img class="img-fluid" src="<%= @post.url %>" alt="">
+        </div>
+        <div class="col-md-4">
+          <h4 class="my-3 text-danger"><%= @post %></h4>
+          <p><%= @post.localization %></p>
+          <p><%= @post.description %></p>
+          <h4 class="my-3">Caracteristicas</h4>
+          <ul>
+            <li>4 Quartos</li>
+            <li> 2 Banheiro</li>
+            <li>Varanda</li>
+            <li>R$ 300.000,00</li>
+          </ul>
+        </div>
+
+      </div>
+      <!-- /.row -->
+
+      <!-- Related Projects Row -->
+      <h4 class="my-4">Mais fotos</h4>
+
+      <div class="row">
+
+        <div class="col-md-3 col-sm-6 mb-4">
+          <a href="<%= @post.image1_url%>">
+            <img class="img-fluid" src="<%= @post.image1_url%>" alt="">
+          </a>
+        </div>
+
+        <div class="col-md-3 col-sm-6 mb-4">
+          <a href="<%= @post.image2_url%>">
+            <img class="img-fluid" src="<%= @post.image2_url%>" alt="">
+          </a>
+        </div>
+
+        <div class="col-md-3 col-sm-6 mb-4">
+          <a href="<%= @post.image3_url%>">
+            <img class="img-fluid" src="<%= @post.image3_url%>" alt="">
+          </a>
+        </div>
+
+        <div class="col-md-3 col-sm-6 mb-4">
+          <a href="<%= @post.image4_url%>">
+            <img class="img-fluid" src="<%= @post.image4_url%>" alt="">
+          </a>
+        </div>
+
+      </div>
+      <!-- /.row -->
+<%= link_to 'Editar', edit_post_path(@post) %> |
+<%= link_to 'Voltar', posts_path %>
