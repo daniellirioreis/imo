@@ -161,7 +161,7 @@ DEPENDENCIES
   has_scope
   jbuilder (~> 2.0)
   jquery-rails
-  pg (~> 0.21)
+  pg
   rails (= 4.2.5.1)
   sass-rails (~> 5.0)
   simple_form

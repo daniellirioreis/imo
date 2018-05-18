@@ -9,11 +9,11 @@ gem 'jbuilder', '~> 2.0'
 gem "font-awesome-rails"
 gem 'simple_form'
 gem 'has_scope'
-
+gem 'pg'
+  
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
-  gem 'pg', '~> 0.21'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
 end
