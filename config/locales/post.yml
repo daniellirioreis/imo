@@ -1,0 +1,21 @@
+
+pt-BR:
+  title:
+  activerecord:
+    models:
+      post:
+        one: "Publicação"
+        many: "Publicações"
+    attributes:
+      post:
+        title: "Título"
+        description: 'Descrição'
+        url: "Url imagem principal"
+        price: "Preço"
+        favorite: "  Destacar"
+        localization: "Localização"
+        image1_url: "Url imagem 1"
+        image2_url: "Url imagem 2"
+        image3_url: "Url imagem 3"
+        image4_url: "Url imagem 4"
+        type_post:  "Tipo de postagem"
