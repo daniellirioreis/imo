@@ -72,52 +72,49 @@
         </div>
       </div>
       
-
-      
-      
-
       <div class="row">
         <div class="col-lg-4 col-sm-6 portfolio-item">
           <div class="card h-100">
-            <a href="#"><img class="card-img-top" src="https://www.parque-montroig.com/en/rentals/fotos/2/1372261854b1492900e53e7100f01de3699df6d423/146045883107c0d126932b0ba4d6af8a4d2875d8d6.jpg" alt=""></a>
+            <a href="#"><img class="card-img-top" src="<%if @post4.url.blank?%>http://placehold.it/700x450 <%else%> <%= @post4.try(:url)%> <%end %>" alt=""></a>
             <div class="card-body">
               <h4 class="card-title">
-                <a href="#">Apartamento</a>
+                <%= link_to "#{@post4}", @post4%>
               </h4>
-              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur eum quasi sapiente nesciunt? Voluptatibus sit, repellat sequi itaque deserunt, dolores in, nesciunt, illum tempora ex quae? Nihil, dolorem!</p>
+              <p class="card-text"><%= @post4.try(:description) %></p>
             </div>
           </div>
         </div>
         <div class="col-lg-4 col-sm-6 portfolio-item">
           <div class="card h-100">
-            <a href="#"><img class="card-img-top" src="http://www.elblogdeldecorador.cl/wp-content/uploads/2017/03/revestimiento-de-piedra-656x984.jpg" alt="" width="100"></a>
+            <a href="#"><img class="card-img-top" src="<%if @post5.url.blank?%>http://placehold.it/700x450 <%else%> <%= @post5.try(:url)%> <%end %>" alt=""></a>
             <div class="card-body">
               <h4 class="card-title">
-                <a href="#">Casa com 5 quartos</a>
+                <%= link_to "#{@post5}", @post5%>
               </h4>
-              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
+              <p class="card-text"><%= @post5.try(:description) %></p>
             </div>
           </div>
         </div>
         <div class="col-lg-4 col-sm-6 portfolio-item">
           <div class="card h-100">
-            <a href="#"><img class="card-img-top" src="https://servicioscady3d.files.wordpress.com/2008/10/apartamento-1.jpg" alt=""></a>
+             <a href="#"><img class="card-img-top" src="<%if @post6.url.blank?%>http://placehold.it/700x450 <%else%> <%= @post6.try(:url)%> <%end %>" alt=""></a>
             <div class="card-body">
               <h4 class="card-title">
-                <a href="#">Casa </a>
+                <%= link_to "#{@post6}", @post6%>
               </h4>
-              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos quisquam, error quod sed cumque, odio distinctio velit nostrum temporibus necessitatibus et facere atque iure perspiciatis mollitia recusandae vero vel quam!</p>
+              <p class="card-text"><%= @post6.try(:description)%></p>
             </div>
           </div>
         </div>        
       </div>
+     
 <!-- Call to Action Section -->
-      <div class="row mb-4">
+     <div class="row mb-4">
         <div class="col-md-8">
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias, expedita, saepe, vero rerum deleniti beatae veniam harum neque nemo praesentium cum alias asperiores commodi.</p>
         </div>
         <div class="col-md-4">
-          <a class="btn btn-lg btn-danger btn-block" href="#">Mais imóveis</a>
+          <a class="btn btn-lg btn-danger btn-block" href="<%= posts_path %>">Mais imóveis</a>
         </div>
       </div>
       <hr>      
