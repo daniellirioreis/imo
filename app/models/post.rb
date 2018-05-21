@@ -5,6 +5,12 @@ class Post < ActiveRecord::Base
  scope :favorite, lambda { |a| where("posts.favorite = ?", a) }
 
  def to_s
- 	title	
+ 	if title.blank?
+ 		""
+ 	else
+ 	  title
+ 	end	
  end
+
+
 end

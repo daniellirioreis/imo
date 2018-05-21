@@ -17,7 +17,7 @@
       <div class="row">
         <div class="col-lg-4 col-sm-6 portfolio-item">
           <div class="card h-100">
-            <a href="#"><img class="card-img-top" src="<%= @post1.try(:url) %>" alt=""></a>
+            <a href="#"><img class="card-img-top" src="<%if @post1.url.blank?%>http://placehold.it/700x450 <%else%> <%= @post1.try(:url)%> <%end %>" alt=""></a>
             <div class="card-body">
               <h4 class="card-title">
                 <%= link_to "#{@post1}", @post1%>
@@ -28,7 +28,7 @@
         </div>
         <div class="col-lg-4 col-sm-6 portfolio-item">
           <div class="card h-100">
-            <a href="#"><img class="card-img-top" src="<%= @post2.try(:url)%>" alt="" width="100"></a>
+            <a href="#"><img class="card-img-top" src="<%if @post2.url.blank?%>http://placehold.it/700x450 <%else%> <%= @post2.try(:url)%> <%end %>" alt=""></a>
             <div class="card-body">
               <h4 class="card-title">
                 <%= link_to "#{@post2}", @post2%>
@@ -39,7 +39,7 @@
         </div>
         <div class="col-lg-4 col-sm-6 portfolio-item">
           <div class="card h-100">
-            <a href="#"><img class="card-img-top" src="<%= @post3.try(:url) %>" alt=""></a>
+             <a href="#"><img class="card-img-top" src="<%if @post3.url.blank?%>http://placehold.it/700x450 <%else%> <%= @post3.try(:url)%> <%end %>" alt=""></a>
             <div class="card-body">
               <h4 class="card-title">
                 <%= link_to "#{@post3}", @post3%>
