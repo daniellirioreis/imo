@@ -4,7 +4,6 @@ class DashboardController < ApplicationController
   	@post1 = Post.favorite(true)[0] 
   	 
   	 if @post1.nil? 
-  	 raise "ai"
   	 	@post1 = Post.new
   	 end	
 
