@@ -10,7 +10,7 @@ pt-BR:
       post:
         title: "Título"
         description: 'Descrição'
-        url: "Url imagem principal"
+        url: "ID imagem principal GOOGLE Drive"
         price: "Preço"
         favorite: "  Destacar"
         localization: "Localização"

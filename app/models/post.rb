@@ -13,4 +13,9 @@ class Post < ActiveRecord::Base
  	  title
  	end	
  end
+ 
+ def image_main_utl_google_drive
+ 	"https://docs.google.com/uc?export=view&id=#{url}"	
+ end
+
 end
