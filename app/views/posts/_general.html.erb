@@ -1,0 +1,23 @@
+<br>      
+ <div class="row">
+    <div class="col-md-7">
+      <%= f.input :title %>
+    </div>
+  </div>
+   <div class="row">
+    <div class="col-md-4">
+      <%= f.input :url %>
+    </div>
+    <div class="col-md-4">
+    <%= f.input :type_post, collection: TypePost %>     </div>
+  </div>
+  <div class="row">
+    <div class="col-md-7">
+      <%= f.input :description, input_html: { cols: 50, rows: 10 } %>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-7">
+      <%= f.input :favorite %>
+    </div>
+  </div>

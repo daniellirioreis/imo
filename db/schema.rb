@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180521165426) do
+ActiveRecord::Schema.define(version: 20180525190252) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -21,8 +21,8 @@ ActiveRecord::Schema.define(version: 20180521165426) do
     t.string   "url"
     t.float    "price"
     t.text     "description"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
     t.boolean  "favorite"
     t.string   "image1_url"
     t.string   "image2_url"
@@ -30,6 +30,21 @@ ActiveRecord::Schema.define(version: 20180521165426) do
     t.string   "image4_url"
     t.string   "localization"
     t.integer  "type_post"
+    t.integer  "number_rooms"
+    t.integer  "number_bedrooms"
+    t.integer  "number_kitchens"
+    t.integer  "number_suites"
+    t.boolean  "number_garden"
+    t.boolean  "porch"
+    t.boolean  "intercom"
+    t.boolean  "elevator"
+    t.float    "size_local"
+    t.string   "image5_url"
+    t.string   "image6_url"
+    t.string   "image7_url"
+    t.string   "image8_url"
+    t.string   "image9_url"
+    t.string   "image10_url"
   end
 
 end

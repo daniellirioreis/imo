@@ -1,47 +1,19 @@
 <%= simple_form_for(@post) do |f| %>
-  <div class="row">
-    <div class="col-md-7">
-      <%= f.input :title %>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-md-4">
-      <%= f.input :url %>
-    </div>
-    <div class="col-md-4">
-    <%= f.input :type_post, collection: TypePost %>     </div>
-  </div>
-  <div class="row">
-    <div class="col-md-7">
-      <%= f.input :localization %>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-md-7">
-      <%= f.input :image1_url %>
-    </div>
-        <div class="col-md-7">
-      <%= f.input :image2_url %>
-    </div>
-    <div class="col-md-7">
-      <%= f.input :image3_url %>
-    </div>
-    <div class="col-md-7">
-      <%= f.input :image4_url %>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-md-7">
-      <%= f.input :description, input_html: { cols: 50, rows: 10 } %>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-md-7">
-      <%= f.input :favorite %>
-    </div>
-  </div>
+  <ul class="nav nav-tabs" id="myTab" role="tablist">
+  <li class="nav-item">
+    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Geral</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Caracteristicas</a>
+  </li>
+</ul>
+<div class="tab-content" id="myTabContent">
+  <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab"><%= render "general", :f => f %></div>
+  <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab"><%= render "characteristic", :f => f %></div>
+</div>
 
-  <div class="actions">
+<div class="actions">
     <%= f.submit  class: "btn btn-success" %>
-  </div>
+</div>
+
 <% end %>

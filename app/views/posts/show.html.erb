@@ -11,10 +11,24 @@
           <p><%= @post.description %></p>
           <h4 class="my-3">Caracteristicas</h4>
           <ul>
-            <li>4 Quartos</li>
-            <li> 2 Banheiro</li>
-            <li>Varanda</li>
-            <li>R$ 300.000,00</li>
+            <li><%= @post.number_bedrooms %> Quartos</li>
+            <li> <%= @post.number_kitchens%> Banheiros</li>
+            <li> <%= @post.number_rooms %> Salas</li>
+            <li> <%= @post.number_suites %> Suites</li>            
+            <% if @post.porch%>
+              <li>Varanda</li>
+            <% end %>
+            <% if @post.number_garden %>
+              <li>Jardim</li>
+            <% end %>
+            <% if @post.intercom %>
+              <li>Interfone</li>
+            <% end %>
+            <% if @post.elevator %>
+              <li>Elevador</li>
+            <% end %>
+            <li><%= number_to_currency(@post.price, precision: 2) %></li>
+            <li><%= @post.size_local.to_i %> metros quadrados</li>
           </ul>
         </div>
 
@@ -27,30 +41,73 @@
       <div class="row">
 
         <div class="col-md-3 col-sm-6 mb-4">
-          <a href="<%= @post.image1_url%>">
-            <img class="img-fluid" src="<%= @post.image1_url%>" alt="">
+          <a href="<%= @post.image1_url_google_drive%>">
+            <img class="img-fluid" src="<%= @post.image1_url_google_drive%>" alt="">
           </a>
         </div>
 
         <div class="col-md-3 col-sm-6 mb-4">
-          <a href="<%= @post.image2_url%>">
-            <img class="img-fluid" src="<%= @post.image2_url%>" alt="">
+          <a href="<%= @post.image2_url_google_drive%>">
+            <img class="img-fluid" src="<%= @post.image2_url_google_drive%>" alt="">
           </a>
         </div>
 
         <div class="col-md-3 col-sm-6 mb-4">
-          <a href="<%= @post.image3_url%>">
-            <img class="img-fluid" src="<%= @post.image3_url%>" alt="">
+          <a href="<%= @post.image3_url_google_drive%>">
+            <img class="img-fluid" src="<%= @post.image3_url_google_drive%>" alt="">
           </a>
         </div>
 
         <div class="col-md-3 col-sm-6 mb-4">
-          <a href="<%= @post.image4_url%>">
-            <img class="img-fluid" src="<%= @post.image4_url%>" alt="">
+          <a href="<%= @post.image4_url_google_drive%>">
+            <img class="img-fluid" src="<%= @post.image4_url_google_drive%>" alt="">
           </a>
         </div>
 
       </div>
+
+      <div class="row">
+
+        <div class="col-md-3 col-sm-6 mb-4">
+          <a href="<%= @post.image5_url_google_drive%>">
+            <img class="img-fluid" src="<%= @post.image5_url_google_drive%>" alt="">
+          </a>
+        </div>
+
+        <div class="col-md-3 col-sm-6 mb-4">
+          <a href="<%= @post.image6_url_google_drive%>">
+            <img class="img-fluid" src="<%= @post.image6_url_google_drive%>" alt="">
+          </a>
+        </div>
+
+        <div class="col-md-3 col-sm-6 mb-4">
+          <a href="<%= @post.image7_url_google_drive%>">
+            <img class="img-fluid" src="<%= @post.image7_url_google_drive%>" alt="">
+          </a>
+        </div>
+
+        <div class="col-md-3 col-sm-6 mb-4">
+          <a href="<%= @post.image8_url_google_drive%>">
+            <img class="img-fluid" src="<%= @post.image8_url_google_drive%>" alt="">
+          </a>
+        </div>
+
+      </div>
+
+      <div class="row">
+
+        <div class="col-md-3 col-sm-6 mb-4">
+          <a href="<%= @post.image9_url_google_drive%>">
+            <img class="img-fluid" src="<%= @post.image9_url_google_drive%>" alt="">
+          </a>
+        </div>
+
+        <div class="col-md-3 col-sm-6 mb-4">
+          <a href="<%= @post.image10_url_google_drive%>">
+            <img class="img-fluid" src="<%= @post.image10_url_google_drive%>" alt="">
+          </a>
+        </div>
+      </div>
       <!-- /.row -->
-<%= link_to 'Editar', edit_post_path(@post) %> |
-<%= link_to 'Voltar', posts_path %>
+<%= link_to 'Editar', edit_post_path(@post) , class: "btn"%> 
+<%= link_to 'Voltar', posts_path , class: "btn" %>
