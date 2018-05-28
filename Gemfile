@@ -10,7 +10,7 @@ gem 'jbuilder', '~> 2.0'
 gem "font-awesome-rails"
 gem 'simple_form'
 gem 'has_scope'
-gem 'pg', '1.0.0'
+gem 'pg', '~> 0.15'
 gem 'enumerate_it'
 
 gem 'rails_12factor', group: :production
