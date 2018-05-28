@@ -14,36 +14,3 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
-
-var maskSetup = function (html) {
-	html.find('text_field.date').inputmask("99/99/9999");    
-    html.find('input.date').inputmask("99/99/9999");
-    html.find('input.phone').inputmask("(99)9999-9999");
-    html.find('input.zipcode').inputmask("99.999-999");
-    html.find('input.cel_phone').inputmask("(99)9 9999-9999");
-    html.find('input.cpf').inputmask("999.999.999-99");
-    html.find('input.average').inputmask("99.99");
-    html.find('input.time').inputmask("99:99");
-   	html.find('input.float').inputmask("999.99");
-   	html.find('input.float_altura').inputmask("9.99");
-  	html.find('input.float_peso').inputmask("999.99");
- 
-   	html.find("input.integer").singlemask(/\d/);
-    html.find("input.decimal").priceFormat({
-        prefix: '',
-        centsSeparator: ',',
-        thousandsSeparator: '.'
-    });
-
-    html.find("input[data-mask]").each(function () {
-        var mask = $(this).data('mask').toString();
-        $(this).inputmask(mask);
-    });
-}
-
-$(function () {
-    maskSetup($(document.body));
-
-    $(document).bind('cocoon:after-insert', function(e, inserted_item) {
-        maskSetup(inserted_item);
-    });
