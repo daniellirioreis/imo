@@ -11,10 +11,18 @@
           <p><%= @post.description %></p>
           <h4 class="my-3">Caracteristicas</h4>
           <ul>
-            <li><%= @post.number_bedrooms %> Quartos</li>
-            <li> <%= @post.number_kitchens%> Banheiros</li>
-            <li> <%= @post.number_rooms %> Salas</li>
-            <li> <%= @post.number_suites %> Suites</li>            
+            <% unless @post.number_bedrooms.nil? %>
+              <li><%= @post.number_bedrooms %> Quartos</li>
+            <% end %>
+            <% unless @post.number_kitchens.nil? %>
+              <li> <%= @post.number_kitchens%> Banheiros</li>
+            <% end %>
+            <% unless @post.number_rooms.nil? %>            
+              <li> <%= @post.number_rooms %> Salas</li>
+            <% end %>
+            <% unless @post.number_rooms.nil? %>            
+              <li> <%= @post.number_suites %> Suites</li>
+            <% end %>
             <% if @post.porch%>
               <li>Varanda</li>
             <% end %>
@@ -27,8 +35,12 @@
             <% if @post.elevator %>
               <li>Elevador</li>
             <% end %>
-            <li><%= number_to_currency(@post.price, precision: 2) %></li>
-            <li><%= @post.size_local.to_i %> metros quadrados</li>
+            <% unless @post.price.blank? %>
+              <li><%= number_to_currency(@post.price, precision: 2) %></li>
+            <% end %>
+            <% unless @post.size_local.blank? %>
+              <li><%= @post.size_local.to_i %> m²</li>
+            <% end %>
           </ul>
         </div>
 
