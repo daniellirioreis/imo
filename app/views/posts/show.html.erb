@@ -121,5 +121,5 @@
         </div>
       </div>
       <!-- /.row -->
-<%= link_to 'Editar', edit_post_path(@post) , class: "btn"%> 
+<%= link_to 'Editar', edit_post_path(@post) , class: "btn" if user_signed_in?%> 
 <%= link_to 'Voltar', posts_path , class: "btn" %>

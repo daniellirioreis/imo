@@ -12,6 +12,7 @@ gem 'simple_form'
 gem 'has_scope'
 gem 'pg', '~> 0.15'
 gem 'enumerate_it'
+gem 'devise'
 
 gem 'rails_12factor', group: :production
 
