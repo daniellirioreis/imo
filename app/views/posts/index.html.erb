@@ -25,7 +25,44 @@
         <td>          
            <img class="img-fluid" src="<%= post.image_main_utl_google_drive%>" alt="">
         </td>
-        <td><%= post.title %></td>
+        <td><%= post.title %>
+           <p><%= post.localization %></p>
+          <p><%= post.description %></p>
+          <h7>Caracteristicas</h7>
+          <ul>
+            <% unless post.number_bedrooms.nil? %>
+              <li><%= post.number_bedrooms %> Quartos</li>
+            <% end %>
+            <% unless post.number_kitchens.nil? %>
+              <li> <%= post.number_kitchens%> Banheiros</li>
+            <% end %>
+            <% unless post.number_rooms.nil? %>            
+              <li> <%= post.number_rooms %> Salas</li>
+            <% end %>
+            <% unless post.number_suites.nil? %>            
+              <li> <%= post.number_suites %> Suites</li>
+            <% end %>
+            <% if post.porch%>
+              <li>Varanda</li>
+            <% end %>
+            <% if post.number_garden %>
+              <li>Jardim</li>
+            <% end %>
+            <% if post.intercom %>
+              <li>Interfone</li>
+            <% end %>
+            <% if post.elevator %>
+              <li>Elevador</li>
+            <% end %>
+            <% unless post.price.blank? %>
+              <li><%= number_to_currency(post.price, precision: 2) %></li>
+            <% end %>
+            <% unless post.size_local.blank? %>
+              <li><%= post.size_local.to_i %> m²</li>
+            <% end %>
+          </ul>
+
+        </td>
         <td><%= post.description %></td>
         <td><%= post.type_post_humanize %></td>
         <td><%= link_to 'Ver', post %></td>
