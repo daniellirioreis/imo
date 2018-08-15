@@ -13,41 +13,48 @@
         </div>
       </div>
 
-
       <div class="row">
-        <div class="col-lg-4 col-sm-6 portfolio-item">
-          <div class="card h-100">
-            <a ><img class="card-img-top" src="<%if @post1.url.blank?%>http://placehold.it/700x450 <%else%> <%= @post1.try(:image_main_utl_google_drive)%> <%end %>" alt=""></a>
-            <div class="card-body">
-              <h4 class="card-title">
-                <%= link_to "#{@post1}", @post1%>
-              </h4>
-              <p class="card-text"><%= @post1.try(:description) %></p>
+        <% if @count_posts_sale >= 1  %>        
+          <div class="col-lg-4 col-sm-6 portfolio-item">
+            <div class="card h-100">
+              <a ><img class="card-img-top" src="<%if @post1.url.blank?%>http://placehold.it/700x450 <%else%> <%= @post1.try(:image_main_utl_google_drive)%> <%end %>" alt=""></a>
+              <div class="card-body">
+                <h4 class="card-title">
+                  <%= link_to "#{@post1}", @post1%>
+                </h4>
+                <p class="card-text"><%= @post1.try(:description) %></p>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="col-lg-4 col-sm-6 portfolio-item">
-          <div class="card h-100">
-            <a  ><img class="card-img-top" src="<%if @post2.url.blank?%>http://placehold.it/700x450 <%else%> <%= @post2.try(:image_main_utl_google_drive)%> <%end %>" alt=""></a>
-            <div class="card-body">
-              <h4 class="card-title">
-                <%= link_to "#{@post2}", @post2%>
-              </h4>
-              <p class="card-text"><%= @post2.try(:description) %></p>
+        <% end %>
+        <% if @count_posts_sale >= 2  %>        
+
+          <div class="col-lg-4 col-sm-6 portfolio-item">
+            <div class="card h-100">
+              <a  ><img class="card-img-top" src="<%if @post2.url.blank?%>http://placehold.it/700x450 <%else%> <%= @post2.try(:image_main_utl_google_drive)%> <%end %>" alt=""></a>
+              <div class="card-body">
+                <h4 class="card-title">
+                  <%= link_to "#{@post2}", @post2%>
+                </h4>
+                <p class="card-text"><%= @post2.try(:description) %></p>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="col-lg-4 col-sm-6 portfolio-item">
-          <div class="card h-100">
-             <a  ><img class="card-img-top" src="<%if @post3.url.blank?%>http://placehold.it/700x450 <%else%> <%= @post3.try(:image_main_utl_google_drive)%> <%end %>" alt=""></a>
-            <div class="card-body">
-              <h4 class="card-title">
-                <%= link_to "#{@post3}", @post3%>
-              </h4>
-              <p class="card-text"><%= @post3.try(:description)%></p>
+        <% end %>
+        <% if @count_posts_sale >= 3  %>   
+
+          <div class="col-lg-4 col-sm-6 portfolio-item">
+            <div class="card h-100">
+               <a  ><img class="card-img-top" src="<%if @post3.url.blank?%>http://placehold.it/700x450 <%else%> <%= @post3.try(:image_main_utl_google_drive)%> <%end %>" alt=""></a>
+              <div class="card-body">
+                <h4 class="card-title">
+                  <%= link_to "#{@post3}", @post3%>
+                </h4>
+                <p class="card-text"><%= @post3.try(:description)%></p>
+              </div>
             </div>
-          </div>
-        </div>        
+          </div>        
+        <% end %>
       </div>
       <!-- Call to Action Section -->
       <div class="row mb-4">
@@ -73,39 +80,48 @@
       </div>
       
       <div class="row">
-        <div class="col-lg-4 col-sm-6 portfolio-item">
-          <div class="card h-100">
-            <a  ><img class="card-img-top" src="<%if @post4.url.blank?%>http://placehold.it/700x450 <%else%> <%= @post4.try(:image_main_utl_google_drive)%> <%end %>" alt=""></a>
-            <div class="card-body">
-              <h4 class="card-title">
-                <%= link_to "#{@post4}", @post4%>
-              </h4>
-              <p class="card-text"><%= @post4.try(:description) %></p>
+
+        
+        <% if @count_posts_rent >= 1  %>
+          <div class="col-lg-4 col-sm-6 portfolio-item">
+            <div class="card h-100">
+              <a  ><img class="card-img-top" src="<%if @post4.url.blank?%>http://placehold.it/700x450 <%else%> <%= @post4.try(:image_main_utl_google_drive)%> <%end %>" alt=""></a>
+              <div class="card-body">
+                <h4 class="card-title">
+                  <%= link_to "#{@post4}", @post4%>
+                </h4>
+                <p class="card-text"><%= @post4.try(:description) %></p>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="col-lg-4 col-sm-6 portfolio-item">
-          <div class="card h-100">
-            <a  ><img class="card-img-top" src="<%if @post5.url.blank?%>http://placehold.it/700x450 <%else%> <%= @post5.try(:image_main_utl_google_drive)%> <%end %>" alt=""></a>
-            <div class="card-body">
-              <h4 class="card-title">
-                <%= link_to "#{@post5}", @post5%>
-              </h4>
-              <p class="card-text"><%= @post5.try(:description) %></p>
+        <% end %>
+        <% if @count_posts_rent >= 2  %>
+          <div class="col-lg-4 col-sm-6 portfolio-item">
+            <div class="card h-100">
+              <a  ><img class="card-img-top" src="<%if @post5.url.blank?%>http://placehold.it/700x450 <%else%> <%= @post5.try(:image_main_utl_google_drive)%> <%end %>" alt=""></a>
+              <div class="card-body">
+                <h4 class="card-title">
+                  <%= link_to "#{@post5}", @post5%>
+                </h4>
+                <p class="card-text"><%= @post5.try(:description) %></p>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="col-lg-4 col-sm-6 portfolio-item">
-          <div class="card h-100">
-             <a  ><img class="card-img-top" src="<%if @post6.url.blank?%>http://placehold.it/700x450 <%else%> <%= @post6.try(:image_main_utl_google_drive)%> <%end %>" alt=""></a>
-            <div class="card-body">
-              <h4 class="card-title">
-                <%= link_to "#{@post6}", @post6%>
-              </h4>
-              <p class="card-text"><%= @post6.try(:description)%></p>
+        <% end %>
+        <% if @count_posts_rent >= 3  %>
+
+          <div class="col-lg-4 col-sm-6 portfolio-item">
+            <div class="card h-100">
+               <a  ><img class="card-img-top" src="<%if @post6.url.blank?%>http://placehold.it/700x450 <%else%> <%= @post6.try(:image_main_utl_google_drive)%> <%end %>" alt=""></a>
+              <div class="card-body">
+                <h4 class="card-title">
+                  <%= link_to "#{@post6}", @post6%>
+                </h4>
+                <p class="card-text"><%= @post6.try(:description)%></p>
+              </div>
             </div>
-          </div>
-        </div>        
+          </div>        
+        <% end %>
       </div>
      
 <!-- Call to Action Section -->
